@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--------------------------
+The Shiny Hunting Guide
+Tyler Million
+ITEC 2380 Final Project
+--------------------------->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shiny Counter | The Shiny Hunting Guide</title>
+  <meta name="description" content="The Shiny Hunting Guide, a free live shiny encounter counter with session history, phase tracking, and progress saving."/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="sparkles" id="sparkles"></div>
+
+  <header>
+    <nav>
+      <div class="nav-logo">✦ The Shiny Hunting Guide</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="methods.html">Methods</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="counter.html" class="nav-active">Counter</a></li>
+        <li><a href="creators.html">Creators</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <section class="page-hero">
+      <p class="page-eyebrow">✦ Never Lose Your Count ✦</p>
+      <h1 class="page-title">Shiny Counter</h1>
+      <p class="page-sub">Track your encounters, phases, and session history all in one place. Fill in your target and game, then start counting.</p>
+    </section>
+
+    <!-- COUNTER TOOL -->
+    <section class="content-section counter-tool">
+
+      <!-- Setup form -->
+      <form class="counter-setup" id="counter-form" onsubmit="return false;">
+        <div class="form-group">
+          <label for="target-pokemon">Target Pokemon</label>
+          <input type="text" id="target-pokemon" placeholder="e.g. Ralts" maxlength="30" />
+        </div>
+        <div class="form-group">
+          <label for="target-game">Game</label>
+          <select id="target-game">
+            <option value="">Select a game...</option>
+            <optgroup label="Generation 2">
+              <option>Gold / Silver</option>
+              <option>Crystal</option>
+            </optgroup>
+            <optgroup label="Generation 3">
+              <option>Ruby / Sapphire</option>
+              <option>Emerald</option>
+              <option>FireRed / LeafGreen</option>
+            </optgroup>
+            <optgroup label="Generation 4">
+              <option>Diamond / Pearl</option>
+              <option>Platinum</option>
+              <option>HeartGold / SoulSilver</option>
+            </optgroup>
+            <optgroup label="Generation 5">
+              <option>Black / White</option>
+              <option>Black 2 / White 2</option>
+            </optgroup>
+            <optgroup label="Generation 6">
+              <option>X / Y</option>
+              <option>Omega Ruby / Alpha Sapphire</option>
+            </optgroup>
+            <optgroup label="Generation 7">
+              <option>Sun / Moon</option>
+              <option>Ultra Sun / Ultra Moon</option>
+            </optgroup>
+            <optgroup label="Generation 8">
+              <option>Sword / Shield</option>
+              <option>Brilliant Diamond / Shining Pearl</option>
+              <option>Legends: Arceus</option>
+            </optgroup>
+            <optgroup label="Generation 9">
+              <option>Scarlet / Violet</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="hunt-method">Method</label>
+          <select id="hunt-method">
+            <option value="">Select a method...</option>
+            <option>Random Encounters</option>
+            <option>Soft Resetting</option>
+            <option>Masuda Method</option>
+            <option>SOS Chaining</option>
+            <option>DexNav Chaining</option>
+            <option>Mass Outbreak</option>
+            <option>Brilliant Aura</option>
+            <option>Poke Radar</option>
+            <option>Friend Safari</option>
+          </select>
+        </div>
+      </form>
+
+      <!-- Counter display -->
+      <div class="full-counter">
+        <p class="counter-label">✦ Encounters ✦</p>
+        <div class="counter-display" id="main-count">0</div>
+        <p class="counter-sub" id="counter-context">Set your target above to get started</p>
+        <div class="counter-buttons">
+          <button class="counter-btn" id="full-increment">+ Encounter</button>
+          <button class="counter-btn btn-found" id="full-found">Found Target!</button>
+          <button class="counter-btn btn-phase" id="full-phase">Log Phase</button>
+          <button class="counter-btn btn-danger" id="full-reset">Reset</button>
+        </div>
+        <p class="counter-save-note">Progress is saved automatically. <button class="clear-save-btn" id="clear-save">Clear saved data</button></p>
+      </div>
+
+      <!-- Phase counter -->
+      <div class="phase-section">
+        <h2 class="section-heading">Phase Tracker</h2>
+        <p class="phase-intro">Found a shiny that was not your target? Log it as a phase and keep going.</p>
+        <ul class="phase-tips">
+          <li>Use Log Phase when you encounter a shiny that is not your target</li>
+          <li>Use Found Target when your target shiny finally appears</li>
+          <li>Use Reset if you want to start a fresh count without logging</li>
+          <li>All sessions are saved automatically and will be here when you return</li>
+        </ul>
+        <div class="phase-stats">
+          <div class="stat-card">
+            <span class="stat-label">Current Phase</span>
+            <span class="stat-value" id="phase-count">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Total Phases</span>
+            <span class="stat-value" id="total-phases">0</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Total Encounters</span>
+            <span class="stat-value" id="total-encounters">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Session history -->
+      <div class="history-section">
+        <h2 class="section-heading">Session History</h2>
+        <p class="phase-intro">Each time you reset or log a phase, a record is saved here for the current session.</p>
+        <table id="history-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Target</th>
+              <th>Game</th>
+              <th>Method</th>
+              <th>Encounters</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody id="history-body">
+            <tr class="history-empty">
+              <td colspan="6">No sessions logged yet. Start counting to track your hunts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 <span>The Shiny Hunting Guide</span></p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="counter.js"></script>
+</body>
+</html>

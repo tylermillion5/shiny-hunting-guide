@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--------------------------
+The Shiny Hunting Guide
+Tyler Million
+ITEC 2380 Final Project
+--------------------------->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | The Shiny Hunting Guide</title>
+  <meta name="description" content="The Shiny Hunting Guide, learn about the site, its mission, sources, video credits, and where to leave feedback."/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="sparkles" id="sparkles"></div>
+
+  <header>
+    <nav>
+      <div class="nav-logo">✦ The Shiny Hunting Guide</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="methods.html">Methods</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="counter.html">Counter</a></li>
+        <li><a href="creators.html">Creators</a></li>
+        <li><a href="about.html" class="nav-active">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <section class="page-hero">
+      <p class="page-eyebrow">✦ About the Site ✦</p>
+      <h1 class="page-title">About</h1>
+    </section>
+
+    <!-- MISSION -->
+    <section class="content-section">
+      <h2 class="section-heading">The goal of this website?</h2>
+      <p class="body-text">Shiny hunting is one of the most rewarding and most frustrating things you can do in a Pokemon game. The problem has never been a lack of information, it's that the information is scattered everywhere. Reddit threads, YouTube videos, wiki pages, fan sites, and Discord servers all have pieces of the puzzle, but none of them have the whole picture in one place.</p>
+      <p class="body-text">The Shiny Hunting Guide was built to fix that. One site, every method, every game, no ads. Whether you are picking up shiny hunting for the first time or you have been at it for years and just need a quick odds reference, this site should have what you need.</p>
+    </section>
+
+    <!-- SOURCES -->
+    <section class="content-section">
+      <h2 class="section-heading">Sources and References</h2>
+      <p class="body-text">The odds, methods, and game-specific information on this site are drawn from the following community resources. All credit goes to the researchers and contributors who documented these mechanics over the years.</p>
+      <ul class="source-list">
+        <li><a href="https://bulbapedia.bulbagarden.net" target="_blank" rel="noopener noreferrer" class="inline-link">Bulbapedia</a> — Comprehensive Pokemon wiki, primary source for odds and mechanic documentation</li>
+        <li><a href="https://www.serebii.net" target="_blank" rel="noopener noreferrer" class="inline-link">Serebii.net</a> — Game specific data and sprite references</li>
+      </ul>
+
+      <h2 class="section-heading">Video Guide Credits</h2>
+      <p class="body-text">The guide videos linked throughout the Games and Methods pages were created by the following YouTubers. All video content remains the property of its respective creators. Videos link directly to each creator's YouTube channel.</p>
+      <ul class="source-list">
+        <li><a href="https://www.youtube.com/@AustinJohnPlays" target="_blank" rel="noopener noreferrer" class="inline-link">Austin John Plays</a> — Scarlet and Violet sandwich shiny hunting guide</li>
+        <li><a href="https://www.youtube.com/@SmkGaming05" target="_blank" rel="noopener noreferrer" class="inline-link">SmkGaming05</a> — Sword and Shield Brilliant Pokemon shiny hunting guide</li>
+        <li><a href="https://www.youtube.com/@Verlisify" target="_blank" rel="noopener noreferrer" class="inline-link">Verlisify</a> — ORAS DexNav chaining guide and ORAS chain fishing guide</li>
+        <li><a href="https://www.youtube.com/@shinycollector" target="_blank" rel="noopener noreferrer" class="inline-link">ShinyCollector</a> — Red Blue Yellow shiny hunting guide</li>
+        <li><a href="https://www.youtube.com/@Nerdycat" target="_blank" rel="noopener noreferrer" class="inline-link">Nerdycat</a> — Gold Silver Crystal shiny hunting and breeding guide</li>
+        <li><a href="https://www.youtube.com/@coconutsqueaks" target="_blank" rel="noopener noreferrer" class="inline-link">Coconut Squeaks</a> — Masuda method guide</li>
+        <li><a href="https://www.youtube.com/@Yellowyugo" target="_blank" rel="noopener noreferrer" class="inline-link">yellowyugo</a> — Pokeradar chaining guide</li>
+        <li><a href="https://www.youtube.com/@ZdsZodyrus" target="_blank" rel="noopener noreferrer" class="inline-link">ZdsPro</a> — B2/W2 shiny charm guide</li>
+        <li><a href="https://www.youtube.com/@dankdedenne1768" target="_blank" rel="noopener noreferrer" class="inline-link">Dank Dedenne</a> — X/Y friend safari guide</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="content-section">
+      <h2 class="section-heading">Contact and Feedback</h2>
+      <p class="body-text">If you have any suggestions or feedback regarding this website please don't hesitate to let me know. Fill out the form below and I will review it.</p>
+
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" placeholder="Your name" maxlength="60" required />
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="contact-type">Type of Feedback</label>
+          <select id="contact-type">
+            <option value="">Select...</option>
+            <option>Correction or error report</option>
+            <option>Content suggestion</option>
+            <option>General feedback</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" placeholder="Tell us what you think..." rows="5" maxlength="1000" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Feedback</button>
+        <p class="form-confirm" id="form-confirm"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 <span>The Shiny Hunting Guide</span></p>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="about.js"></script>
+</body>
+</html>

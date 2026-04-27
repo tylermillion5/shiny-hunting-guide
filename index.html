@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--------------------------
+The Shiny Hunting Guide
+Tyler Million
+ITEC 2380 Final Project
+--------------------------->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Shiny Hunting Guide</title>
+  <meta name="description" content="The Shiny Hunting Guide, a complete resource for shiny hunting in every mainline Pokemon game. Methods, game guides, odds, and a live encounter counter."/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Sparkle background -->
+  <div class="sparkles" id="sparkles"></div>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="nav-logo">✦ The Shiny Hunting Guide</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="methods.html">Methods</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="counter.html">Counter</a></li>
+        <li><a href="creators.html">Creators</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <p class="hero-eyebrow">✦ Your Complete Hunting Resource ✦</p>
+      <h1>
+        <span class="word-shiny">The</span><br>
+        <span class="word-hunters">Shiny</span><br>
+        <span class="word-guide">Hunting Guide</span>
+      </h1>
+      <p class="hero-sub">
+        Everything you need to find your perfect shiny Pokémon, all in one place.
+      </p>
+      <div class="hero-cta">
+        <a href="counter.html" class="btn-primary">Start Hunting</a>
+        <a href="methods.html" class="btn-secondary">Pick a Method</a>
+      </div>
+
+      <!-- Animated shiny sprites -->
+      <div class="sprite-showcase">
+        <div class="sprite-frame">
+          <img src="https://play.pokemonshowdown.com/sprites/ani-shiny/crobat.gif" alt="Shiny Crobat animated sprite"/>
+          <span class="sprite-label">✦ Shiny Crobat</span>
+        </div>
+        <div class="sprite-frame">
+          <img src="https://play.pokemonshowdown.com/sprites/ani-shiny/greninja.gif" alt="Shiny Greninja animated sprite"/>
+          <span class="sprite-label">✦ Shiny Greninja</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="divider"><span class="divider-icon">◆</span></div>
+
+    <!-- FEATURE CARDS -->
+    <section class="features">
+      <p class="features-title">◆ Features ◆</p>
+      <ul class="sr-only-list">
+        <li>Game Guides — walkthroughs for every generation with embedded video guides</li>
+        <li>Hunting Methods — Masuda Method, SOS Chaining, DexNav, Outbreaks, and more</li>
+        <li>Shiny Counter — live encounter tracker with session history</li>
+        <li>Odds and Rates — probability tables for every method and game</li>
+      </ul>
+      <div class="cards-grid">
+
+        <a class="card" href="games.html">
+          <span class="card-icon">🎮</span>
+          <h3>Game Guides</h3>
+          <p>Step-by-step shiny hunting walkthroughs for every mainline Pokémon game, from Red/Blue through Scarlet/Violet, including embedded video guides for each method.</p>
+          <span class="card-tag tag-gold">All Generations</span>
+        </a>
+
+        <a class="card" href="methods.html">
+          <span class="card-icon">🔍</span>
+          <h3>Hunting Methods</h3>
+          <p>Masuda Method, SOS chaining, DexNav, radar chaining, outbreak hunting, explained clearly with tips and odds.</p>
+          <span class="card-tag tag-teal">7 Methods</span>
+        </a>
+
+        <a class="card" href="counter.html">
+          <span class="card-icon">🔢</span>
+          <h3>Shiny Counter</h3>
+          <p>Track your encounters in real time. Set a target Pokémon, start counting, and never lose your place again.</p>
+          <span class="card-tag tag-gold">Live Tracker</span>
+        </a>
+
+        <a class="card" href="methods.html">
+          <span class="card-icon">📊</span>
+          <h3>Odds and Rates</h3>
+          <p>Exact encounter odds for every method and game, including Shiny Charm bonuses and chain modifiers.</p>
+          <span class="card-tag tag-purple">Data Tables</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <span>The Shiny Hunting Guide</span></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
