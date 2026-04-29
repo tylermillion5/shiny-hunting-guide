@@ -118,6 +118,20 @@
     saveState();
   });
 
+  // Bump animation
+  mainCount.classList.add('counter-bump);
+  setTimetout(function () { mainCount.classList.remove('counter-bump'); }, 150);
+
+  // Visual ping ring
+  var ping = document.createElement('div');
+  ping.className = 'counter-ping';
+  var fullCounter = document.quearySelector('.full-counter');
+  fullCounter.appendChild(ping);
+  setTimeout(function () {ping.remove(); }, 500);
+
+  saveState();
+});
+
   // --- Found Target ---
   btnFound.addEventListener('click', function () {
     if (count === 0) return;
