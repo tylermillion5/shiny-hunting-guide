@@ -116,21 +116,21 @@
     .classList.add('counter-bump');
     setTimeout(function () { .classList.remove('counter-bump'); }, 150);
     saveState();
-  });
+    });
 
   // Bump animation
-  mainCount.classList.add('counter-bump');
-  setTimetout(function () { mainCount.classList.remove('counter-bump'); }, 150);
+    mainCount.classList.add('counter-bump');
+    setTimetout(function () { mainCount.classList.remove('counter-bump'); }, 150);
 
   // Visual ping ring
-  var ping = document.createElement('div');
-  ping.className = 'counter-ping';
-  var fullCounter = document.querySelector('.full-counter');
-  fullCounter.appendChild(ping);
-  setTimeout(function () {ping.remove(); }, 500);
+    var ping = document.createElement('div');
+    ping.className = 'counter-ping';
+    var fullCounter = document.querySelector('.full-counter');
+    fullCounter.appendChild(ping);
+    setTimeout(function () {ping.remove(); }, 500);
 
-  saveState();
-});
+    saveState();
+  });
 
   // --- Found Target ---
   btnFound.addEventListener('click', function () {
