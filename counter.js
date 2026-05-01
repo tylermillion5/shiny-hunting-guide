@@ -67,7 +67,7 @@
       if (state.method) methodSelect.value = state.method;
 
       // Restore display numbers
-      mainCount.textContent     = count.toLocaleString();
+      .textContent     = count.toLocaleString();
       phaseCountEl.textContent  = currentPhase.toLocaleString();
       totalPhasesEl.textContent = totalPhaseNum.toLocaleString();
       totalEncEl.textContent    = grandTotal.toLocaleString();
@@ -110,22 +110,22 @@
     count        += 1;
     currentPhase += 1;
     grandTotal   += 1;
-    mainCount.textContent     = count.toLocaleString();
+    .textContent     = count.toLocaleString();
     phaseCountEl.textContent  = currentPhase.toLocaleString();
     totalEncEl.textContent    = grandTotal.toLocaleString();
-    mainCount.classList.add('counter-bump');
-    setTimeout(function () { mainCount.classList.remove('counter-bump'); }, 150);
+    .classList.add('counter-bump');
+    setTimeout(function () { .classList.remove('counter-bump'); }, 150);
     saveState();
   });
 
   // Bump animation
-  mainCount.classList.add('counter-bump);
+  mainCount.classList.add('counter-bump');
   setTimetout(function () { mainCount.classList.remove('counter-bump'); }, 150);
 
   // Visual ping ring
   var ping = document.createElement('div');
   ping.className = 'counter-ping';
-  var fullCounter = document.quearySelector('.full-counter');
+  var fullCounter = document.querySelector('.full-counter');
   fullCounter.appendChild(ping);
   setTimeout(function () {ping.remove(); }, 500);
 
